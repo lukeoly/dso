@@ -1,0 +1,40 @@
+// 
+// Form
+// -----------------------------------------
+
+
+.form-group {
+  input {
+    &[type="checkbox"],
+    &[type="radio"] {
+      &:focus {
+        + label {
+          &::before {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &[type="radio"] {
+      + label {
+        &::after {
+          background-color: $brand-primary;
+        }
+      }
+    }
+
+    &[type="checkbox"] {
+      + label {
+        &::after {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}
+
+
+.radio-inline {
+  @extend .radio;
+}

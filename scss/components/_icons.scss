@@ -1,0 +1,17 @@
+// 
+// Icons
+// -----------------------------------------
+
+// $fa-font-path:        "../../fonts" !default;
+
+
+@mixin icon-circle {
+  border-radius: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  display: inline-block;
+  line-height: 1.5em;
+  
+  @media (min-width: $screen-sm-min) { line-height: 1.6em; }
+}
+

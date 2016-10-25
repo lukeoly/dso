@@ -1,0 +1,39 @@
+{
+  "name": "DSO",
+  "description": "Builds the stylesheet for the DSO website",
+  "version": "1.0.0",
+  "author": {
+    "name": "Luke Olyslagers",
+      "email": "lukeoly@me.com"
+  },
+  "private": true,
+  "contributors": [
+    {
+      "name": "Luke Olyslagers",
+      "email": "lukeoly@me.com"
+    }
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "keywords": [
+    "bootstrap"
+  ],
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "gulp-install": "^0.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.3.6",
+    "gulp": "^3.8.9",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "1.2.8",
+    "gulp-util": "^3.0.1"
+  }
+}

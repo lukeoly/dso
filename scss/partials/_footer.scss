@@ -1,0 +1,16 @@
+// 
+// Footer
+// -----------------------------------------
+
+.site-container {
+  footer.default-footer {
+    .widget.text-widget {
+      >a {
+        &:after{
+          margin: 20px 0;
+          width: 105px;
+        }
+      }
+    }
+  }
+}

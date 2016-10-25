@@ -1,0 +1,28 @@
+{
+  "name": "dso",
+  "description": "Divorce Services Online",
+  "keywords": [],
+  "homepage": "",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.1",
+    "awesome-bootstrap-checkbox": "^0.3.7"
+  },
+  "devDependencies": {},
+  "license": [
+    "MIT"
+  ],
+  "main": [
+    "form.html"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "src",
+    "*.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.md"
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"components/sections.css","sources":["components/sections.scss"],"sourcesContent":["// \n// Section\n// -----------------------------------------\n\nbody {\n  background-color: #eee;\n}\n\n"],"mappings":"AAIA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,IAAK,GACxB","names":[],"sourceRoot":"/source/"}

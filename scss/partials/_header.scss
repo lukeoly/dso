@@ -1,0 +1,49 @@
+// 
+// Header
+// -----------------------------------------
+
+.site-container {
+  padding-top: 90px;
+  
+  @media (min-width: $screen-sm-min) { padding-top: 130px; }
+  
+  header.header {
+    .navbar {
+      a.navbar-brand {
+        padding-top: 17px;
+        padding-left: 15px;
+      }
+
+      .navbar-right {
+        @media (min-width: $screen-sm-min) { margin-right: 0;}
+      }
+    }
+
+    &.affix {
+      .navbar {
+        a.navbar-brand { 
+          height: 65px;
+          padding-left: 15px;
+        }
+      }      
+    }
+
+    &.affix-top {
+      .navbar {
+        a.navbar-brand { 
+          height: 90px;
+
+          @media (min-width: $screen-md-min) { height: 125px; }
+        }
+      }
+
+      .navbar-header {
+        button {
+          padding: 25px 10px;
+          
+          @media (min-width: $screen-sm-min) { padding: 34px 10px; }
+        }
+      }
+    }
+  }
+}

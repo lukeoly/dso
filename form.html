@@ -1,0 +1,864 @@
+<html lang="en" data-ember-extension="1">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>DSO Application Form</title>
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Begin page content -->
+  <div class="container">
+    <form role="form" id="form">
+      <h3>DSO application form</h3> 
+
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>Self:</h4>
+          <div class="form-group">
+            <label for="self_family_name">Family name (as used now)</label>
+            <input class="form-control" id="self_family_name" name="self_family_name" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="self_full_given_names">Full given names</label>
+            <input class="form-control" id="self_full_given_names" name="self_full_given_names" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="self_dob">Date of birth</label>
+            <input class="form-control" id="self_dob" name="self_dob" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="self_country_of_birth">Country of birth</label>
+            <input class="form-control" id="self_country_of_birth" name="self_country_of_birth" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="self_country_living_start_date">if born outside Australia, date you started living in Australia</label>
+            <input class="form-control" id="self_country_living_start_date" name="self_country_of_birth" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="self_occupation">Occupation</label>
+            <input class="form-control" id="self_occupation" name="self_occupation" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="self_address">Residential address</label>
+            <input class="form-control" id="self_address" name="self_address" type="text" />
+          </div>              
+        </div>
+
+        <div class="col-sm-6">
+          <h4>Spouse:</h4>
+          <div class="form-group">
+            <label for="spouse_family_name">Family name (as used now)</label>
+            <input class="form-control" id="spouse_family_name" name="spouse_family_name" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_full_given_names">Full given names</label>
+            <input class="form-control" id="spouse_full_given_names" name="spouse_full_given_names" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_dob">Date of birth</label>
+            <input class="form-control" id="spouse_dob" name="spouse_dob" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_country_of_birth">Country of birth</label>
+            <input class="form-control" id="spouse_country_of_birth" name="spouse_country_of_birth" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_country_living_start_date">
+            if born outside Australia, date you started living in Australia</label>
+            <input class="form-control" id="spouse_country_living_start_date" name="spouse_country_living_start_date" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_occupation">Occupation</label>
+            <input class="form-control" id="spouse_occupation" name="spouse_occupation" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_address">Residential address</label>
+            <input class="form-control" id="spouse_address" name="spouse_address" type="text" />
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <label>
+        Is this a joint application? 
+        <small class="text-muted">(If joint application, fields below must be filled for both parties)</small>
+      </label>
+      <div class="form-group">
+        <div class="radio-inline">
+          <input type="radio" name="joint_application" id="joint_application_yes" value="yes">
+          <label for="joint_application_yes"> Yes</label>
+        </div>
+        <div class="radio-inline">
+          <input type="radio" name="joint_application" id="joint_application_no" value="no"> 
+          <label for="joint_application_no"> No</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6">
+          <label>Do you regard Australia as your home and intend to live in Australia indefinitely?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="self_intend_to_live_in_australia" id="self_intend_to_live_in_australia_yes" value="yes">
+              <label for="self_intend_to_live_in_australia_yes"> Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="self_intend_to_live_in_australia" id="self_intend_to_live_in_australia_no" value="no">
+              <label for="self_intend_to_live_in_australia_no"> No</label>
+            </div>
+          </div>
+          
+          <label>Are you an Australian citizen?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="self_australian_citizen" id="self_australian_citizen_yes" value="yes">
+              <label for="self_australian_citizen_yes"> Yes</label> 
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="self_australian_citizen" id="self_australian_citizen_no" value="no">
+              <label for="self_australian_citizen_no"> No</label>
+            </div>
+          </div>
+          
+          <div class="conditional" data-cond-option="self_australian_citizen" data-cond-value="yes">
+            <label>Are you an Australian citizen by grant of Australian citizenship?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="self_australian_citizen_by_grant" id="self_australian_citizen_by_grant_yes" value="yes">
+                <label for="self_australian_citizen_by_grant_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="self_australian_citizen_by_grant" id="self_australian_citizen_by_grant_no" value="no">
+                <label for="self_australian_citizen_by_grant_no"> No</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="conditional" data-cond-option="self_australian_citizen_by_grant" data-cond-value="yes">
+            <div class="form-group">
+              <label>Please upload a copy of the citizen certificate</label>
+              <input class="form-control" id="self_citizen-certificate" name="self_citizen-certificate" type="file" />
+            </div>
+          </div>
+
+          <label>Do you ordinarily live in Australia and have done so for the 12 months immediately before filling out this application?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="self_past_year_australian_resident" id="self_past_year_australian_resident_yes" value="yes">
+              <label for="self_past_year_australian_resident_yes"> Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="self_past_year_australian_resident" id="self_past_year_australian_resident_no" value="no">
+              <label for="self_past_year_australian_resident_no"> No</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 conditional" data-cond-option="joint_application" data-cond-value="yes">
+          <label>Does your spouse regard Australia as their home and intend to live in Australia indefinitely?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="spouse_intend_to_live_in_australia" id="spouse_intend_to_live_in_australia_yes" value="yes">
+              <label for="spouse_intend_to_live_in_australia_yes"> Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="spouse_intend_to_live_in_australia" id="spouse_intend_to_live_in_australia_no" value="no">
+              <label for="spouse_intend_to_live_in_australia_no"> No</label>
+            </div>
+          </div>
+          
+          <label>Is your spouse an Australian citizen?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="spouse_australian_citizen" id="spouse_australian_citizen_yes" value="yes">
+              <label for="spouse_australian_citizen_yes"> Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="spouse_australian_citizen" id="spouse_australian_citizen_no" value="no">
+              <label for="spouse_australian_citizen_no"> No</label>
+            </div>
+          </div>
+          
+          <div class="conditional" data-cond-option="spouse_australian_citizen" data-cond-value="yes">
+            <label>Is your spouse an Australian citizen by grant of Australian citizenship?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="spouse_australian_citizen_by_grant" id="spouse_australian_citizen_by_grant_yes" value="yes">
+                <label for="spouse_australian_citizen_by_grant_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="spouse_australian_citizen_by_grant" id="spouse_australian_citizen_by_grant_no" value="no">
+                <label for="spouse_australian_citizen_by_grant_no"> No</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="conditional" data-cond-option="spouse_australian_citizen_by_grant" data-cond-value="yes">
+            <div class="form-group">
+              <label>Please upload a copy of the citizen certificate</label>
+              <input class="form-control" id="spouse_citizen-certificate" name="spouse_citizen-certificate" type="file" />
+            </div>
+          </div>
+
+          <label>Does your spouse ordinarily live in Australia and have done so for the 12 months immediately before filling out this application?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="spouse_past_year_australian_resident" id="spouse_past_year_australian_resident_yes" value="yes">
+              <label for="spouse_past_year_australian_resident_yes"> Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="spouse_past_year_australian_resident" id="spouse_past_year_australian_resident_no" value="no">
+              <label for="spouse_past_year_australian_resident_no"> No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <h3>Section: marriage and separation</h3>
+      <div class="form-group">
+        <label for="file_marriage_certificate">Upload your a copy of your marriage certificate</label>
+        <input class="form-control" id="file_marriage_certificate" name="file_marriage_certificate" type="file" />
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label for="date_of_separation">Date of separation</label>
+          <input class="form-control" id="date_of_separation" name="date_of_separation" type="date" />
+        </div>
+      </div>
+      
+      
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label>At the end of the separation, did you regard the marriage as over?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="self_end_separation_marriage_over" id="self_end_separation_marriage_over_yes" value="yes">
+                <label for="self_end_separation_marriage_over_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="self_end_separation_marriage_over" id="self_end_separation_marriage_over_no" value="no">
+                <label for="self_end_separation_marriage_over_no"> No</label>
+              </div>
+            </div>
+
+            <div class="conditional" data-cond-option="self_end_separation_marriage_over" data-cond-value="no">
+              <div class="form-group">
+                <label for="self_date_regarded_marriage_over">On what date did you regard the marriage as over?</label>
+                <input class="form-control" id="self_date_regarded_marriage_over" name="self_date_regarded_marriage_over" type="date" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 conditional" data-cond-option="joint_application" data-cond-value="yes">
+            <label>At the end of the separation, did your spouse regard the marriage as over?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="spouse_end_separation_marriage_over" id="spouse_end_separation_marriage_over_yes" value="yes">
+                <label for="spouse_end_separation_marriage_over_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="spouse_end_separation_marriage_over" id="spouse_end_separation_marriage_over_no" value="no">
+                <label for="spouse_end_separation_marriage_over_no"> No</label>
+              </div>
+            </div>
+
+            <div class="conditional" data-cond-option="spouse_end_separation_marriage_over" data-cond-value="no">
+              <div class="form-group">
+                <label for="self_date_regarded_marriage_over">On what date did your spouse regard the marriage as over?</label>
+                <input class="form-control" id="self_date_regarded_marriage_over" name="self_date_regarded_marriage_over" type="date" />
+              </div>
+            </div>          
+          </div>
+        </div>
+      
+
+      <label>Since the date of separation, have you and your spouse lived together in the same home but not as husband and wife?</label>
+      <div class="form-group">
+        <div class="radio-inline">
+          <input type="radio" name="post_separation_lived_in_same_house" id="post_separation_lived_in_same_house_yes" value="yes">
+          <label for="post_separation_lived_in_same_house_yes"> Yes</label>
+        </div>
+        <div class="radio-inline">
+          <input type="radio" name="post_separation_lived_in_same_house" id="post_separation_lived_in_same_house_no" value="no">
+          <label for="post_separation_lived_in_same_house_no"> No</label>
+        </div>
+      </div>
+      
+      <div class="conditional" data-cond-option="post_separation_lived_in_same_house" data-cond-value="yes">
+        <label>Please give dates of each period you and your spouse lived together in the same home after separation</label>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="form-group">
+                  <label for="living_together_from_1">From</label>
+                  <input class="form-control" id="living_together_from_1" name="living_together_from_1" type="date" />
+                </div>
+              </div>
+              <div class="col-xs-5">
+                <div class="form-group">
+                  <label for="living_together_to_1">To</label>
+                  <input class="form-control" id="living_together_to_1" name="living_together_to_1" type="date" />
+                </div>
+              </div>
+              <div class="col-xs-2">
+                <label>&nbsp;</label>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-self-destruct" type="button" data-toggle="collapse" data-target="#second_living_together-period" aria-expanded="false" aria-controls="second_living_together-period">Add</button>      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse" id="second_living_together-period">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>Period 2</label>
+              <div class="row">
+                <div class="col-xs-5">
+                  <div class="form-group">
+                    <label for="living_together_from_2">From</label>
+                    <input class="form-control" id="living_together_from_2" name="living_together_from_2" type="date" />
+                  </div>
+                </div>
+                <div class="col-xs-5">
+                  <div class="form-group">
+                    <label for="living_together_to_2">To</label>
+                    <input class="form-control" id="living_together_to_2" name="living_together_to_2" type="date" />
+                  </div>
+                </div>
+                <div class="col-xs-2">
+                  <label>&nbsp;</label>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-self-destruct" type="button" data-toggle="collapse" data-target="#third_living_together-period" aria-expanded="false" aria-controls="third_living_together-period">Add</button>      
+                  </div>
+                </div>
+              </div>          
+            </div>          
+          </div>          
+        </div>
+
+        <div class="collapse" id="third_living_together-period">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>Period 3</label>
+              <div class="row">
+                <div class="col-xs-5">
+                  <div class="form-group">
+                    <label for="living_together_from_3">From</label>
+                    <input class="form-control" id="living_together_from_3" name="living_together_from_3" type="date" />
+                  </div>
+                </div>
+                <div class="col-xs-5">
+                  <div class="form-group">
+                    <label for="living_together_to_3">To</label>
+                    <input class="form-control" id="living_together_to_3" name="living_together_to_3" type="date" />
+                  </div>
+                </div>
+              </div>          
+            </div>          
+          </div>          
+        </div>
+      </div>
+      
+      <label for="living_reconciled">Since the date of separation, have you and your spouse lived together as husband and wife?</label>
+      <p><em>(i.e. have you reconciled at any time since the separation)</em></p>
+      <div class="form-group">
+        <div class="radio-inline">
+          <input type="radio" name="living_reconciled" id="living_reconciled_yes" value="yes">
+          <label for="living_reconciled_yes"> Yes</label>
+        </div>
+        <div class="radio-inline">
+          <input type="radio" name="living_reconciled" id="living_reconciled_no" value="no">
+          <label for="living_reconciled_no"> No</label>
+        </div>
+      </div>
+      
+      <div class="conditional" data-cond-option="living_reconciled" data-cond-value="yes">
+        <label>Please give dates of each period you and your spouse lived together as husband and wife</label>
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="living_reconciled_from">From</label>
+                <input class="form-control" id="living_reconciled_from" name="living_reconciled_from" type="date" />
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="living_reconciled_to">To</label>
+                <input class="form-control" id="living_reconciled_to" name="living_reconciled_to" type="date" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <h3>Other court cases</h3> 
+      <label>Are there any current cases in any court about family law, child support, family violence, abuse, or child welfare involving either of the parties or their children?</label>
+      <div class="form-group">
+        <div class="radio-inline">
+          <input type="radio" name="pending_cases" id="pending_cases_yes" value="yes">
+          <label for="pending_cases_yes"> Yes</label>
+        </div>
+        <div class="radio-inline">
+          <input type="radio" name="pending_cases" id="pending_cases_no" value="no">
+          <label for="pending_cases_no"> No</label>
+        </div>
+      </div>
+      
+      <div class="conditional" data-cond-option="pending_cases" data-cond-value="yes">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="pending_case_name">Court name and place</label>
+            <input class="form-control" id="pending_case_name" name="pending_case_name" type="text" />
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="pending_case_date">Next court date</label>
+            <input class="form-control" id="pending_case_date" name="pending_case_date" type="date" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 form-group">
+            <label for="pending_case_parties">Names of parties and/or children</label>
+            <input class="form-control" id="pending_case_parties" name="pending_case_parties" type="text" />
+            <div class="form-group">
+              <label for="pending_case_summary">Brief summary of current pending cases</label>
+              <textarea  class="form-control" rows="8"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <label for="existing_orders">Are there any existing orders, binding agreements, parenting plans or undertakings to a court about family law, child support, family violence, abuse or child welfare involving either of the parties or their children?</label>
+      <div class="form-group">
+        <div class="radio-inline">
+          <input type="radio" name="existing_orders" id="existing_orders_yes" value="yes">
+          <label for="existing_orders_yes"> Yes</label>
+        </div>
+        <div class="radio-inline">
+          <input type="radio" name="existing_orders" id="existing_orders_no" value="no">
+          <label for="existing_orders_no"> No</label>
+        </div>
+      </div>
+      
+      <div class="conditional" data-cond-option="existing_orders" data-cond-value="yes">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="existing_orders_name">Court name and place</label>
+            <input class="form-control" id="existing_orders_name" name="existing_orders_name" type="text" />
+          </div>
+            
+          <div class="col-sm-4 form-group">
+            <label for="existing_orders_date">Date</label>
+            <input class="form-control" id="existing_orders_date" name="existing_orders_date" type="date" />
+          </div>
+        </div>
+            
+        <div class="row">
+          <div class="col-sm-8 form-group">
+            <label for="existing_orders_summary">Details of the order, binding agreement, parenting plan or undertaking</label>
+            <textarea  class="form-control" id="existing_orders_summary" rows="8"></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <h3>Section: Children</h3>
+
+      <label for="child_members_of_family">Are there any children currently under 18 who are children of you and your spouse or who were treated as members of your family when you and your spouse separated?</label>
+      <div class="form-group">
+        <div class="radio-inline">
+          <input type="radio" name="child_members_of_family" id="child_members_of_family_yes" value="yes">
+          <label for="child_members_of_family_yes"> Yes</label>
+        </div>
+        <div class="radio-inline">
+          <input type="radio" name="child_members_of_family" id="child_members_of_family_no" value="no">
+          <label for="child_members_of_family_no"> No</label>
+        </div>
+      </div>
+      
+      <div class="conditional" data-cond-option="child_members_of_family" data-cond-value="yes">
+        <div class="row">
+          <fieldset class="col-sm-6">
+            <legend>
+              <h4>Child 1</h4>
+            </legend>
+
+            <div class="collapse section_child_2"><br><br><br></div>
+            
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="child_1_family_name">Family Name</label>
+                <input class="form-control" id="child_1_family_name" name="child_1_family_name" type="text" />
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="child_1_given_names">Given Names</label>
+                <input class="form-control" id="child_1_given_names" name="child_1_given_names" type="text" />
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="child_1_dob">Date Of Birth</label>
+                <input class="form-control" id="child_1_dob" name="child_1_dob" type="date" />
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="child_1_gender">Gender</label>
+                <input class="form-control" id="child_1_gender" name="child_1_gender" type="text" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="child_1_father">Name of Father</label>
+                <input class="form-control" id="child_1_father" name="child_1_father" type="text" />
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="child_1_mother">Name of Mother</label>
+                <input class="form-control" id="child_1_mother" name="child_1_mother" type="text" />
+              </div>
+            </div>
+            
+            <label for="child_1_living_with">Who does the child live with?</label>
+            <p><em>Husband, Wife, other (specify name and address)</em></p>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_1_living_with" id="child_1_living_with_husband" value="husband">
+                <label for="child_1_living_with_husband"> Husband</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_1_living_with" id="child_1_living_with_wife" value="wife">
+                <label for="child_1_living_with_wife"> Wife</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_1_living_with" id="child_1_living_with_other" value="other">
+                <label for="child_1_living_with_other"> Other</label>
+              </div>
+            </div>
+            <div class="conditional row" data-cond-option="child_1_living_with" data-cond-value="other">
+              <div class="col-sm-6 form-group">
+                <label for="child_1_living_with_other_name">Please Specify</label>
+                <input class="form-control" id="child_1_living_with_other_name" name="child_1_living_with_other_name" type="text"/>
+              </div>
+            </div>
+            
+            <label for="child_1_other_parent_time">Does the child spend time with the other parent?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_1_other_parent_time" id="child_1_other_parent_time_yes" value="yes">
+                <label for="child_1_other_parent_time_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_1_other_parent_time" id="child_1_other_parent_time_no" value="no">
+                <label for="child_1_other_parent_time_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional" data-cond-option="child_1_other_parent_time" data-cond-value="no">
+              <div class="form-group">
+                <label for="child_1_other_parent_time_why_not">Why not?</label>
+                <input class="form-control" id="child_1_other_parent_time_why_not" name="child_1_other_parent_time_why_not" type="text" /> 
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="child_1_supported_by">Who financially supports the child? </label>
+              <input class="form-control" id="child_1_supported_by" name="child_1_supported_by" type="text" /> 
+            </div>
+
+            <label for="child_1_good_health">Is the child in good health?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_1_good_health" id="child_1_good_health_yes" value="yes">
+                <label for="child_1_good_health_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_1_good_health" id="child_1_good_health_no" value="no">
+                <label for="child_1_good_health_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional" data-cond-option="child_1_good_health" data-cond-value="no">
+              <div class="form-group">
+                <label for="child_1_health_issues">What are the health issues?</label>
+                <input type="text" name="child_1_health_issues" id="child_1_health_issues" class="form-control">
+              </div>
+            </div>
+
+            <label for="child_1_school">Does the child attend school or preschool?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_1_school" id="child_1_school_yes" value="yes">
+                <label for="child_1_school_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_1_school" id="child_1_school_no" value="no">
+                <label for="child_1_school_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional" data-cond-option="child_1_school" data-cond-value="yes">
+              <div class="form-group">
+                <label for="child_1_school_name_year">Which school and what year?</label>
+                <input type="text" name="child_1_school_name_year" id="child_1_school_name_year" class="form-control">
+              </div>
+            </div>
+
+            <label for="child_1_current_arrangement_changes">Do you plan to make changes to these current arrangements?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_1_current_arrangement_changes" id="child_1_current_arrangement_changes_yes" value="yes">
+                <label for="child_1_current_arrangement_changes_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_1_current_arrangement_changes" id="child_1_current_arrangement_changes_no" value="no">
+                <label for="child_1_current_arrangement_changes_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional form-group" data-cond-option="child_1_current_arrangement_changes" data-cond-value="yes">
+              <label for="child_1_current_arrangement_changes_details">Please provide details of the significant changes planned</label>
+              <textarea  class="form-control" name="
+              child_1_current_arrangement_changes_details" id="child_1_current_arrangement_changes_details" rows="8"></textarea> 
+            </div>
+          
+            <button class="btn btn-primary btn-self-destruct" type="button" data-toggle="collapse" data-target=".section_child_2" aria-expanded="false" aria-controls="section_child_2">Add child</button>
+          </fieldset>
+
+
+
+
+            
+          <fieldset class="section_child_2 collapse col-sm-6">
+            <legend>
+              <h4>Child 2</h4>
+            </legend>
+            <label for="child_2_family_details">Are the family details the same for your second child?</label>
+            <div class="form-group">
+              <div class="checkbox">
+                <input type="checkbox" name="child_2_family_details" id="child_2_family_details" value="yes">
+                <label for="child_2_family_details"> Yes</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="child_2_family_name">Family Name</label>
+                <input class="form-control" id="child_2_family_name" name="child_2_family_name" type="text" />
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="child_2_given_names">Given Names</label>
+                <input class="form-control" id="child_2_given_names" name="child_2_given_names" type="text" />
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="child_2_dob">Date Of Birth</label>
+                <input class="form-control" id="child_2_dob" name="child_2_dob" type="date" />
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="child_2_gender">Gender</label>
+                <input class="form-control" id="child_2_gender" name="child_2_gender" type="text" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="child_2_father">Name of Father</label>
+                <input class="form-control" id="child_2_father" name="child_2_father" type="text" />
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="child_2_mother">Name of Mother</label>
+                <input class="form-control" id="child_2_mother" name="child_2_mother" type="text" />
+              </div>
+            </div>
+            
+            <label for="child_2_living_with">Who does the child live with?</label>
+            <p><em>Husband, Wife, other (specify name and address)</em></p>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_2_living_with" id="child_2_living_with_husband" value="husband">
+                <label for="child_2_living_with_husband"> Husband</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_2_living_with" id="child_2_living_with_wife" value="wife">
+                <label for="child_2_living_with_wife"> Wife</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_2_living_with" id="child_2_living_with_other" value="other">
+                <label for="child_2_living_with_other"> Other</label>
+              </div>
+            </div>
+            <div class="conditional row" data-cond-option="child_2_living_with" data-cond-value="other">
+              <div class="col-sm-6 form-group">
+                <label for="child_2_living_with_other_name">Please Specify</label>
+                <input class="form-control" id="child_2_living_with_other_name" name="child_2_living_with_other_name" type="text"/>
+              </div>
+            </div>
+            
+            <label for="child_2_other_parent_time">Does the child spend time with the other parent?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_2_other_parent_time" id="child_2_other_parent_time_yes" value="yes">
+                <label for="child_2_other_parent_time_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_2_other_parent_time" id="child_2_other_parent_time_no" value="no">
+                <label for="child_2_other_parent_time_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional" data-cond-option="child_2_other_parent_time" data-cond-value="no">
+              <div class="form-group">
+                <label for="child_2_other_parent_time_why_not">Why not?</label>
+                <input class="form-control" id="child_2_other_parent_time_why_not" name="child_2_other_parent_time_why_not" type="text" /> 
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="child_2_supported_by">Who financially supports the child? </label>
+              <input class="form-control" id="child_2_supported_by" name="child_2_supported_by" type="text" /> 
+            </div>
+
+            <label for="child_2_good_health">Is the child in good health?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_2_good_health" id="child_2_good_health_yes" value="yes">
+                <label for="child_2_good_health_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_2_good_health" id="child_2_good_health_no" value="no">
+                <label for="child_2_good_health_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional" data-cond-option="child_2_good_health" data-cond-value="no">
+              <div class="form-group">
+                <label for="child_2_health_issues">What are the health issues?</label>
+                <input type="text" name="child_2_health_issues" id="child_2_health_issues" class="form-control">
+              </div>
+            </div>
+
+            <label for="child_2_school">Does the child attend school or preschool?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_2_school" id="child_2_school_yes" value="yes">
+                <label for="child_2_school_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_2_school" id="child_2_school_no" value="no">
+                <label for="child_2_school_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional" data-cond-option="child_2_school" data-cond-value="yes">
+              <div class="form-group">
+                <label for="child_2_school_name_year">Which school and what year?</label>
+                <input type="text" name="child_2_school_name_year" id="child_2_school_name_year" class="form-control">
+              </div>
+            </div>
+
+            <label for="child_2_current_arrangement_changes">Do you plan to make changes to these current arrangements?</label>
+            <div class="form-group">
+              <div class="radio-inline">
+                <input type="radio" name="child_2_current_arrangement_changes" id="child_2_current_arrangement_changes_yes" value="yes">
+                <label for="child_2_current_arrangement_changes_yes"> Yes</label>
+              </div>
+              <div class="radio-inline">
+                <input type="radio" name="child_2_current_arrangement_changes" id="child_2_current_arrangement_changes_no" value="no">
+                <label for="child_2_current_arrangement_changes_no"> No</label>
+              </div>
+            </div>
+            
+            <div class="conditional form-group" data-cond-option="child_2_current_arrangement_changes" data-cond-value="yes">
+              <label for="child_2_current_arrangement_changes_details">Please provide details of the significant changes planned</label>
+              <textarea  class="form-control" name="
+              child_2_current_arrangement_changes_details" id="child_2_current_arrangement_changes_details" rows="8"></textarea> 
+            </div>
+            
+            <button class="btn btn-primary btn-self-destruct" type="button" data-toggle="collapse" data-target=".section_child_2" aria-expanded="false" aria-controls="section_child_2">Add child</button>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  <script src="js/conditionize.jquery.js"></script>
+  
+  <script src="js/form.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      // Initialise Conditionize
+      $('.conditional').conditionize();
+
+      // Self desucting add button after click
+      $('.btn-self-destruct').on('click', function() {
+        $(this).remove();
+      });
+
+      // Auto populate additional children
+
+     $("#child_2_family_details").on('change', function() {
+      if ($(this).prop('checked')) {
+       
+        //get the values of the filled fields
+        $child1FamilyName = $('#child_1_family_name').val();
+        $child1Father = $('#child_1_father').val();
+        $child1Mother = $('#child_1_mother').val();
+        $child1SupportedBy = $('#child_1_supported_by').val();
+        $child1CurrentArrangementChanges = $('#child_1_current_arrangement_changes').val();
+        $child1CurrentArrangementChangesDetails = $('#child_1_current_arrangement_changes_details').val();
+
+        // Populate second child's details with data from first child
+        $.fn.copyChildDetails = function(child1Val) {
+          $(this).val(child1Val);
+        };
+
+        $('#child_2_family_name').copyChildDetails($child1FamilyName);
+        $('#child_2_father').copyChildDetails($child1Father);
+        $('#child_2_mother').copyChildDetails($child1Mother);
+        $('#child_2_supported_by').copyChildDetails($child1SupportedBy);
+        $('#child_2_current_arrangement_changes').copyChildDetails($child1CurrentArrangementChanges);
+        $('#child_2_current_arrangement_changes_details').copyChildDetails($child1CurrentArrangementChangesDetails);        
+
+        // $('#child_2_family_name').val($child1FamilyName);
+        // $('#child_2_father').val($child1Father);
+        // $('#child_2_mother').val($child1Mother);
+        // $('#child_2_supported_by').val($child1SupportedBy);
+        // $('#child_2_current_arrangement_changes').val($child1CurrentArrangementChanges);
+        // $('#child_2_current_arrangement_changes_details').val($child1CurrentArrangementChangesDetails);
+      } else {
+       $('#child_2_family_name').val('');
+       $('#child_2_father').val('');
+       $('#child_2_mother').val('');
+       $('#child_2_supported_by').val('');
+       $('#child_2_current_arrangement_changes').val('');
+       $('#child_2_current_arrangement_changes_details').val('');
+      }
+     });
+    });
+  </script>
+
+</body>
+</html>
