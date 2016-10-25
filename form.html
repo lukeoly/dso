@@ -833,6 +833,11 @@
         // Populate second child's details with data from first child
         $.fn.copyChildDetails = function(child1Val) {
           $(this).val(child1Val);
+          var $hasValue = this.val();
+          if ($hasValue) {
+            $(this).parent().addClass('has-success has-feedback');
+          } 
+
         };
 
         $('#child_2_family_name').copyChildDetails($child1FamilyName);
