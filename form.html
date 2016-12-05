@@ -12,6 +12,42 @@
 </head>
 
 <body>
+  <header>
+    <div class="container">
+      <div class="row between-sm">
+        <div class="col-xs-12 col-sm-4 col-md-6 col-lg-7">
+          <!-- <h1> -->
+            <a href="#" class="logo text-hide">Divorce services online</a>
+          <!-- </h1> -->
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
+          <nav>
+            <ul class="nav menu">
+              <li><a href="#">home</a></li>
+              <li><a href="#">packages</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="jumbotron hero">
+    <div class="container row middle-sm end-sm hidden-xs">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="panel panel-primary outline">
+          <div class="panel-body">
+            <h2 class="text-center">Australia's most comprehensive online divorce service</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
   <!-- Begin page content -->
   <div class="container">
     <form role="form" id="form">
@@ -801,69 +837,29 @@
     </form>
   </div>
 
+  <footer>
+    <div class="container">
+      <div class="row center-sm middle-sm">
+        <div class="col-xs-12 col-sm-4 border-right">
+          <h3 class="text-center">Contact</h3>
+          <p class="text-center">
+            PO Box 000 Suburb NSW 2250<br>
+            Phone 1300 000 000<br>
+            Email <a href="mailto:info@divorceservicesonline.com.au">info@divorceservicesonline.com.au</a>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <img src="img/nsw-law-society-member.svg" alt="" class="img-responsive footer-law-society-logo">
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   <script src="js/conditionize.jquery.js"></script>
   
   <script src="js/form.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      // Initialise Conditionize
-      $('.conditional').conditionize();
-
-      // Self desucting add button after click
-      $('.btn-self-destruct').on('click', function() {
-        $(this).remove();
-      });
-
-      // Auto populate additional children
-
-     $("#child_2_family_details").on('change', function() {
-      if ($(this).prop('checked')) {
-       
-        //get the values of the filled fields
-        $child1FamilyName = $('#child_1_family_name').val();
-        $child1Father = $('#child_1_father').val();
-        $child1Mother = $('#child_1_mother').val();
-        $child1SupportedBy = $('#child_1_supported_by').val();
-        $child1CurrentArrangementChanges = $('#child_1_current_arrangement_changes').val();
-        $child1CurrentArrangementChangesDetails = $('#child_1_current_arrangement_changes_details').val();
-
-        // Populate second child's details with data from first child
-        $.fn.copyChildDetails = function(child1Val) {
-          $(this).val(child1Val);
-          var $hasValue = this.val();
-          if ($hasValue) {
-            $(this).parent().addClass('has-success has-feedback');
-          } 
-
-        };
-
-        $('#child_2_family_name').copyChildDetails($child1FamilyName);
-        $('#child_2_father').copyChildDetails($child1Father);
-        $('#child_2_mother').copyChildDetails($child1Mother);
-        $('#child_2_supported_by').copyChildDetails($child1SupportedBy);
-        $('#child_2_current_arrangement_changes').copyChildDetails($child1CurrentArrangementChanges);
-        $('#child_2_current_arrangement_changes_details').copyChildDetails($child1CurrentArrangementChangesDetails);        
-
-        // $('#child_2_family_name').val($child1FamilyName);
-        // $('#child_2_father').val($child1Father);
-        // $('#child_2_mother').val($child1Mother);
-        // $('#child_2_supported_by').val($child1SupportedBy);
-        // $('#child_2_current_arrangement_changes').val($child1CurrentArrangementChanges);
-        // $('#child_2_current_arrangement_changes_details').val($child1CurrentArrangementChangesDetails);
-      } else {
-       $('#child_2_family_name').val('');
-       $('#child_2_father').val('');
-       $('#child_2_mother').val('');
-       $('#child_2_supported_by').val('');
-       $('#child_2_current_arrangement_changes').val('');
-       $('#child_2_current_arrangement_changes_details').val('');
-      }
-     });
-    });
-  </script>
 
 </body>
 </html>
