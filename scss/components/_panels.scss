@@ -1,0 +1,51 @@
+// 
+// Panels
+// -----------------------------------------
+
+// Panel variants mixin
+@mixin panel($color, $text: $white) {
+  background-color: $color;
+  color: $text;
+  
+  h2, h3, h4 {
+    color: inherit;
+  }
+  
+  &.outline {
+    background-color: transparent;
+    color: $color;
+    border: 1px solid $color
+    
+
+  }
+}
+
+.panel {
+  color: $white;
+  
+  // Variants
+  &.panel-primary {
+    @include panel($bondi-blue);
+  }
+
+  &.panel-secondary {
+    @include panel($slate-gray);
+  }
+
+  &.panel-info {
+    @include panel($picton-blue);
+  }
+  
+  &.panel-default {
+    @include panel($gray);
+  }
+  
+  // Panel contents
+  h6 {
+    color: $black;
+  }  
+
+  small {
+    color: $white;
+  }
+}

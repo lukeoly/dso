@@ -1,0 +1,49 @@
+// 
+// Home
+// -----------------------------------------
+
+.image-section-2,
+.hero {
+  background-size: auto 100%;
+}
+
+.hero {
+  background: url('../../img/homepage-hero.jpg') center center no-repeat;
+  display: flex;
+  min-height: 250px;
+  background-size: auto 100%;
+  
+  @media (min-width: $screen-sm) {
+    min-height: 420px;
+    background-size: auto;
+  }
+  
+  > {
+    .end-sm {
+      align-self: flex-end;
+      
+      @media (min-width: $screen-sm) {
+        align-self: middle;
+      }
+    }
+  }
+
+  .panel {
+    margin-bottom: 0;
+  }
+}
+
+.image-section-2 {
+  background: url('../../img/homepage-hero-section-2.jpg') center center no-repeat;  
+  min-height: 290px;
+}
+
+.package {
+  .panel-body {
+    padding: 30px;
+  }
+}
+
+.package-icon {
+  max-height: 60px;
+}

@@ -7,7 +7,9 @@
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.6.3",
     "jquery": "^3.1.1",
-    "awesome-bootstrap-checkbox": "^0.3.7"
+    "awesome-bootstrap-checkbox": "^0.3.7",
+    "bootstrap-material-design": "0.5.10",
+  "flexboxgrid-sass": "^8.0.5"
   },
   "devDependencies": {},
   "license": [
@@ -24,5 +26,8 @@
     "Gemfile",
     "Gemfile.lock",
     "*.md"
-  ]
+  ],
+  "resolutions": {
+    "bootstrap": "v4-dev"
+  }
 }

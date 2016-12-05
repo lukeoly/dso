@@ -1,0 +1,11 @@
+// 
+// Sections
+// -----------------------------------------
+
+section {
+  padding: 10px 0;
+  
+  @media (min-width: $screen-sm) {
+    padding: 70px 0;
+  }
+}

@@ -1,0 +1,19 @@
+// 
+// Buttons
+// -----------------------------------------
+
+
+.btn {
+  padding: 5px 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  
+  // Variants
+  &.btn-default {
+    &.outline {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+}

@@ -4,30 +4,43 @@
 // -----------------------------------------
 
 
-// Import Bootstrap overrides
-// @import 'base/bootstrap-variables';
+// Colours
+@import 'base/colors';
 
 // Import Boostrap
+@import 'base/bootstrap-variables';
 @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 // Import Material Design Lite Theme
-@import '../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss';
+// @import '../bower_components/bootstrap-material-design/sass/bootstrap-material-design.scss';
+
+@import '..//bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss';
+
+// Flexbox Grid
+@import 'base/flexbox-grid-overrides';
+@import '../bower_components/flexboxgrid-sass/flexboxgrid';
 
 // Import Font Awesome
+$fa-font-path: "../../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
 
 // Base
-@import 'base/colors';
 @import 'base/utilities';
+@import 'base/fonts';
 
 // Components
 @import 'components/icons';
 @import 'components/sections';
 @import 'components/typography';
 @import 'components/forms';
+@import 'components/jumbotron';
+@import 'components/panels';
+@import 'components/buttons';
 
 
 // Sections
 @import 'partials/header';
 @import 'partials/footer';
+// Pages
+@import 'partials/home';
 @import 'partials/contact';

@@ -2,46 +2,64 @@
 // Header
 // -----------------------------------------
 
-.site-container {
-  padding-top: 90px;
+header {
+  padding: 25px 0;
   
-  @media (min-width: $screen-sm-min) { padding-top: 130px; }
-  
-  header.header {
-    .navbar {
-      a.navbar-brand {
-        padding-top: 17px;
-        padding-left: 15px;
-      }
+  .logo {
+    background: url('../../img/logo.svg') 0 0 no-repeat;
+    width: 166px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      margin: 0;
+      border-right: 2px solid $white;
+    }
+  }
 
-      .navbar-right {
-        @media (min-width: $screen-sm-min) { margin-right: 0;}
-      }
+  .menu {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    
+    @media (min-width: $screen-sm) {
+      text-align: right;
     }
 
-    &.affix {
-      .navbar {
-        a.navbar-brand { 
-          height: 65px;
-          padding-left: 15px;
+    li {
+      display: inline-block;
+      
+      a {
+        padding: 9px;
+        color: $slate-gray;
+        transition: all .2s ease-in-out;
+        
+        @media (min-width: $screen-sm) {
+          padding: 10px 15px;
         }
-      }      
-    }
 
-    &.affix-top {
-      .navbar {
-        a.navbar-brand { 
-          height: 90px;
 
-          @media (min-width: $screen-md-min) { height: 125px; }
+        &:hover {
+          background-color: transparent;
+          color: $brand-primary;
         }
       }
 
-      .navbar-header {
-        button {
-          padding: 25px 10px;
-          
-          @media (min-width: $screen-sm-min) { padding: 34px 10px; }
+      &:first-child {
+        a {
+          @media (max-width: $screen-sm) {
+            padding-left: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        a {
+          @media (max-width: $screen-sm) {
+            padding-right: 0;
+          }
         }
       }
     }

@@ -1,0 +1,96 @@
+// 
+// Fonts
+// -----------------------------------------
+
+// Regular
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-italic-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-italic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+// Light
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-light-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-lightitalic-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-lightitalic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+
+// Semibold
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-semibold-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-semibolditalic-webfont.woff2') format('woff2'),
+  url('../fonts/open-sans/opensans-semibolditalic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+// Bold
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-bolditalic-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-bolditalic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+// Extrabold
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-extrabold-webfont.woff2') format('woff2'), 
+  url('../fonts/open-sans/opensans-extrabold-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open-sans/opensans-extrabolditalic-webfont.woff2') format('woff2'),
+  url('../fonts/open-sans/opensans-extrabolditalic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
