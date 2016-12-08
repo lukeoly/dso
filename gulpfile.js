@@ -20,6 +20,7 @@ var gulp         = require('gulp'),
   var css_path  = 'dist/css/',
       sass_path = 'scss/**/*.scss',
       bowerDir = './bower_components/';
+      font_path = 'dist/fonts/'
 
 // Sass task
 gulp.task('sass', function() {
@@ -38,9 +39,16 @@ gulp.task('sass', function() {
 });
 
 
+// Fonts
+gulp.task('fonts', function() {
+  return gulp.src([
+    'bower_components/font-awesome/fonts/fontawesome-webfont.*'])
+  .pipe(gulp.dest('dist/fonts/font-awesome/'));
+});
+
 // Default task to be run with `gulp`
-gulp.task('default', ['sass'], function() {
-  gulp.watch(sass_path, ['sass']);
+gulp.task('default', ['sass', 'fonts'], function() {
+  gulp.watch(sass_path, ['sass', 'fonts']);
   gulp.watch('/*.html', ['browser-sync']);
 });
 
