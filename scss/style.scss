@@ -21,7 +21,7 @@
 @import '../bower_components/flexboxgrid-sass/flexboxgrid';
 
 // Import Font Awesome
-$fa-font-path: "../../bower_components/font-awesome/fonts";
+@import 'components/icons';
 @import '../bower_components/font-awesome/scss/font-awesome';
 
 // Base
@@ -29,7 +29,6 @@ $fa-font-path: "../../bower_components/font-awesome/fonts";
 @import 'base/fonts';
 
 // Components
-@import 'components/icons';
 @import 'components/sections';
 @import 'components/typography';
 @import 'components/forms';
