@@ -52,6 +52,17 @@ gulp.task('sass', function() {
 });
 
 
+// JS
+gulp.task('js', function() {
+  return gulp.src([
+    'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+    'js/conditionize.jquery.js',
+    'js/form.js',
+  ])
+  .pipe(gulp.dest('dist/js/'));
+});
+
 // Fonts
 gulp.task('fonts', function() {
   return gulp.src([
@@ -60,7 +71,7 @@ gulp.task('fonts', function() {
 });
 
 // Default task to be run with `gulp`
-gulp.task('default', ['serve', 'fonts'], function() {
+gulp.task('default', ['serve', 'js', 'fonts'], function() {
   gulp.watch(sass_path, ['sass', 'fonts']);
 });
 
