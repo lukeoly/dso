@@ -20,10 +20,9 @@ h6 {
     margin-top: 0;
     margin-bottom: 30px;
     font-weight: 700;
-    text-align: center;
     
     @media (min-width: $screen-sm) {
-      margin-top: 20px;
+      padding-top: 20px;
     }
   }
 
@@ -68,6 +67,9 @@ h6 {
 
 // Horizontal rule
 hr {
+  margin-top:    30px;
+  margin-bottom: 30px;
+  
   &.primary {
     border-top-width: 3px;
     border-top-color: $brand-primary;
@@ -76,5 +78,9 @@ hr {
   &.short {
     width: 80px;
     margin: 30px auto;
+  }
+
+  &.thin {
+    border-top-width: 1px;
   }
 }

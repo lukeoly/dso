@@ -5,6 +5,10 @@
 
 .form-group {
   input {
+    &.form-control {
+       box-shadow: 0 0 0;
+    }
+
     &[type="checkbox"],
     &[type="radio"] {
       &:focus {
@@ -18,7 +22,16 @@
 
     &[type="radio"] {
       + label {
+        &::before {
+          border-color: $gallery;
+          background-color: $gallery;
+        }
+
         &::after {
+          width: 17px;
+          height: 17px;
+          top: 0;
+          left: 0;
           background-color: $brand-primary;
         }
       }
@@ -38,3 +51,4 @@
 .radio-inline {
   @extend .radio;
 }
+

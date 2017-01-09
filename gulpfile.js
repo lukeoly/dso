@@ -4,23 +4,36 @@ var gulp         = require('gulp'),
     plumber      = require('gulp-plumber'),
     sourcemaps   = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
+    browserSync  = require('browser-sync'),
 
-    onError = function (err) {
-      notify({
-        title: 'Gulp Task Error',
-        message: 'Check the console.'
-      }).write(err);
+onError = function (err) {
+  notify({
+    title: 'Gulp Task Error',
+    message: 'Check the console.'
+  }).write(err);
 
-      console.log(err.toString());
-       
-      this.emit('end');
- };
+  console.log(err.toString());
+   
+  this.emit('end');
+};
 
 
-  var css_path  = 'dist/css/',
-      sass_path = 'scss/**/*.scss',
-      bowerDir = './bower_components/';
-      font_path = 'dist/fonts/'
+var css_path  = 'dist/css/',
+    sass_path = 'scss/**/*.scss',
+    bowerDir = './bower_components/';
+    font_path = 'dist/fonts/'
+
+// BrowserSync task
+gulp.task('serve', ['sass'], function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+
+  gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('./*.html').on('change', browserSync.reload);
+});
 
 // Sass task
 gulp.task('sass', function() {
@@ -47,9 +60,8 @@ gulp.task('fonts', function() {
 });
 
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'fonts'], function() {
+gulp.task('default', ['serve', 'fonts'], function() {
   gulp.watch(sass_path, ['sass', 'fonts']);
-  gulp.watch('/*.html', ['browser-sync']);
 });
 
 

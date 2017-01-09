@@ -1,0 +1,33 @@
+// 
+// Application Form
+// -----------------------------------------
+
+.form-col-section {
+  margin: 30px 0 40px;
+  
+  &.bordered {
+    border-top: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+    
+    .form-col {
+      border-right: 1px solid $silver;
+    }
+  }
+  
+  .form-col {
+    padding: 20px;
+    
+    @media (min-width: $screen-sm) {
+      padding: 40px 80px;
+    }
+    
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right-width: 0;
+    }
+  }
+}
