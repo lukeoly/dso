@@ -10780,7 +10780,7 @@ footer {
       border-right: 1px solid #ccc; }
   .form-col-section .form-col {
     padding: 20px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       .form-col-section .form-col {
         padding: 40px 80px; } }
     .form-col-section .form-col:first-child {
