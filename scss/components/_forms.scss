@@ -44,6 +44,13 @@
         }
       }
     }
+    &[type="date"] {
+      padding: 6px;
+            
+      &::-webkit-datetime-edit-text { padding: 0; }
+      &::-webkit-inner-spin-button { display: none; }
+      &::-webkit-calendar-picker-indicator { display: block; font-size: 85%; }
+    }
   }
 }
 

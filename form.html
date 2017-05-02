@@ -58,7 +58,7 @@
 
       <div class="row">
         <div class="col-xs-12 col-sm">
-          <h4 class="title">Self:</h4>
+          <h4 class="title">About you:</h4>
           <div class="form-group">
             <input class="form-control" id="self_family_name" name="self_family_name" type="text" />
             <label for="self_family_name">Family name (as used now)</label>
@@ -71,26 +71,42 @@
             <input class="form-control" id="self_dob" name="self_dob" type="text" />
             <label for="self_dob">Date of birth</label>
           </div>
+
+          <label>Country of birth</label>
           <div class="form-group">
-            <input class="form-control" id="self_country_of_birth" name="self_country_of_birth" type="text" />
-            <label for="self_country_of_birth">Country of birth</label>
+            <div class="radio-inline">
+              <input type="radio" name="self_country_of_birth" id="self_country_of_birth_australia" value="yes">
+              <label for="self_country_of_birth_australia"> Australia</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="self_country_of_birth" id="self_country_of_birth_other" value="other">
+              <label for="self_country_of_birth_other"> Other</label>
+            </div>
           </div>
-          <div class="form-group">
-            <input class="form-control" id="self_country_living_start_date" name="self_country_of_birth" type="text" />
-            <label for="self_country_living_start_date">if born outside Australia, date you started living in Australia</label>
+
+          <div class="conditional" data-cond-option="self_country_of_birth" data-cond-value="other">
+            <div class="form-group">
+              <input class="form-control" id="self_country_of_birth" name="self_country_of_birth" type="text" />
+              <label for="self_country_of_birth">Country of birth</label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="self_country_living_start_date" name="self_country_of_birth" type="date" />
+              <label for="self_country_living_start_date">Date you started living in Australia</label>
+            </div>
           </div>
+
           <div class="form-group">
             <input class="form-control" id="self_occupation" name="self_occupation" type="text" />
             <label for="self_occupation">Occupation</label>
           </div>
           <div class="form-group">
             <input class="form-control" id="self_address" name="self_address" type="text" />
-            <label for="self_address">Residential address</label>
+            <label for="self_address">Current residential address</label>
           </div>              
         </div>
 
         <div class="col-xs-12 col-sm">
-          <h4 class="title">Spouse:</h4>
+          <h4 class="title">About your spouse:</h4>
           <div class="form-group">
             <input class="form-control" id="spouse_family_name" name="spouse_family_name" type="text" />
             <label for="spouse_family_name">Family name (as used now)</label>
@@ -103,22 +119,37 @@
             <input class="form-control" id="spouse_dob" name="spouse_dob" type="text" />
             <label for="spouse_dob">Date of birth</label>
           </div>
+
+          <label>Country of birth</label>
           <div class="form-group">
-            <input class="form-control" id="spouse_country_of_birth" name="spouse_country_of_birth" type="text" />
-            <label for="spouse_country_of_birth">Country of birth</label>
+            <div class="radio-inline">
+              <input type="radio" name="spouse_country_of_birth" id="spouse_country_of_birth_australia" value="yes">
+              <label for="spouse_country_of_birth_australia"> Australia</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="spouse_country_of_birth" id="spouse_country_of_birth_other" value="other">
+              <label for="spouse_country_of_birth_other"> Other</label>
+            </div>
           </div>
-          <div class="form-group">
-            <input class="form-control" id="spouse_country_living_start_date" name="spouse_country_living_start_date" type="text" />
-            <label for="spouse_country_living_start_date">
-            if born outside Australia, date you started living in Australia</label>
+
+          <div class="conditional" data-cond-option="spouse_country_of_birth" data-cond-value="other">
+            <div class="form-group">
+              <input class="form-control" id="spouse_country_of_birth" name="spouse_country_of_birth" type="text" />
+              <label for="spouse_country_of_birth">Country of birth</label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="spouse_country_living_start_date" name="spouse_country_of_birth" type="date" />
+              <label for="spouse_country_living_start_date">Date your spouse started living in Australia</label>
+            </div>
           </div>
+
           <div class="form-group">
             <input class="form-control" id="spouse_occupation" name="spouse_occupation" type="text" />
             <label for="spouse_occupation">Occupation</label>
           </div>
           <div class="form-group">
             <input class="form-control" id="spouse_address" name="spouse_address" type="text" />
-            <label for="spouse_address">Residential address</label>
+            <label for="spouse_address">Current residential address</label>
           </div>
         </div>
       </div>
@@ -178,11 +209,11 @@
           
           <div class="conditional" data-cond-option="self_australian_citizen" data-cond-value="yes">
             <div class="row middle-sm form-group">
-              <div class="col-sm-6 col-md-7">
+              <div class="col-xs-12 col-sm-6 col-md-7">
                 <label>Are you an Australian citizen by grant of Australian citizenship?</label>
               </div>
 
-              <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
                 <div class="radio-inline">
                   <input type="radio" name="self_australian_citizen_by_grant" id="self_australian_citizen_by_grant_yes" value="yes">
                   <label for="self_australian_citizen_by_grant_yes"> Yes</label>
@@ -197,26 +228,22 @@
           
           <div class="conditional" data-cond-option="self_australian_citizen_by_grant" data-cond-value="yes">
             <div class="row middle-sm form-group">
-              <div class="col-sm-6 col-md-7">
+              <div class="col-xs-12 col-sm-6 col-md-7">
                 <label>Please upload a copy of the citizen certificate</label>
               </div>
               
-              <div class="col-sm-4">
+              <div class="col-xs-12 col-sm-4">
                 <input class="form-control" id="self_citizen-certificate" name="self_citizen-certificate" type="file" />
-
-
-                <input type="file" name="file-1[]" id="self_citizen-certificate" class="form-control inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
-                <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
               </div>
             </div>
           </div>
 
           <div class="row middle-sm form-group">
-            <div class="col-sm-6 col-md-7">
+            <div class="col-xs-12 col-sm-6 col-md-7">
               <label>Do you ordinarily live in Australia and have done so for the 12 months immediately before filling out this application?</label>
             </div>
             
-            <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
               <div class="radio-inline">
                 <input type="radio" name="self_past_year_australian_resident" id="self_past_year_australian_resident_yes" value="yes">
                 <label for="self_past_year_australian_resident_yes"> Yes</label>
@@ -230,11 +257,11 @@
         </div>
         <div class="col-xs-6 conditional form-col" data-cond-option="joint_application" data-cond-value="yes">
           <div class="row middle-sm form-group">
-            <div class="col-sm-6 col-md-7">
+            <div class="col-xs-12 col-sm-6 col-md-7">
               <label>Does your spouse regard Australia as their home and intend to live in Australia indefinitely?</label>
             </div>
 
-            <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
               <div class="radio-inline">
                 <input type="radio" name="spouse_intend_to_live_in_australia" id="spouse_intend_to_live_in_australia_yes" value="yes">
                 <label for="spouse_intend_to_live_in_australia_yes"> Yes</label>
@@ -247,11 +274,11 @@
           </div>
           
           <div class="row middle-sm form-group">
-            <div class="col-sm-6 col-md-7">
+            <div class="col-xs-12 col-sm-6 col-md-7">
               <label>Is your spouse an Australian citizen?</label>
             </div>
 
-            <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
               <div class="radio-inline">
                 <input type="radio" name="spouse_australian_citizen" id="spouse_australian_citizen_yes" value="yes">
                 <label for="spouse_australian_citizen_yes"> Yes</label>
@@ -265,11 +292,11 @@
           
           <div class="conditional" data-cond-option="spouse_australian_citizen" data-cond-value="yes">
             <div class="row middle-sm form-group">
-              <div class="col-sm-6 col-md-7">
+              <div class="col-xs-12 col-sm-6 col-md-7">
                 <label>Is your spouse an Australian citizen by grant of Australian citizenship?</label>
               </div>
 
-              <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
                 <div class="radio-inline">
                   <input type="radio" name="spouse_australian_citizen_by_grant" id="spouse_australian_citizen_by_grant_yes" value="yes">
                   <label for="spouse_australian_citizen_by_grant_yes"> Yes</label>
@@ -284,21 +311,21 @@
           
           <div class="conditional" data-cond-option="spouse_australian_citizen_by_grant" data-cond-value="yes">
             <div class="row middle-sm form-group">
-              <div class="col-sm-6 col-md-7">
+              <div class="col-xs-12 col-sm-6 col-md-7">
                 <label>Please upload a copy of the citizen certificate</label>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
                 <input class="form-control" id="spouse_citizen-certificate" name="spouse_citizen-certificate" type="file" />
               </div>
             </div>
           </div>
 
           <div class="row middle-sm form-group">
-            <div class="col-sm-6 col-md-7">
+            <div class="col-xs-12 col-sm-6 col-md-7">
               <label>Does your spouse ordinarily live in Australia and have done so for the 12 months immediately before filling out this application?</label>
             </div>
 
-            <div class="col-sm-6 col-md-4 col-lg-offset-1 text-right">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-offset-1 text-right">
               <div class="radio-inline">
                 <input type="radio" name="spouse_past_year_australian_resident" id="spouse_past_year_australian_resident_yes" value="yes">
                 <label for="spouse_past_year_australian_resident_yes"> Yes</label>
@@ -315,19 +342,20 @@
 
 
       <h3 class="title">Marriage and separation</h3>
-
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-xs-12 col-sm-5">
           <div class="form-group">
             <label for="file_marriage_certificate">Upload your a copy of your marriage certificate</label>
             <input class="form-control" id="file_marriage_certificate" name="file_marriage_certificate" type="file" />
           </div>
 
           <div class="form-group">
-            <label for="date_of_separation">Date of separation</label>
+            <label for="date_of_separation">
+              Date of separation&nbsp;
+              <i class="fa fa-question-circle" id="date_of_separation_tooltip" data-toggle="tooltip" title="The date of separation is the date when one or both of you made the decision to end your marriage, acted on that decision and told the other person. You and your spouse do not need to agree for separation to occur. It can be the decision of one or both of you. It is possible to separate and continue living in the same house. This is known as separation under the one roof."></i>
+            </label>
             <input class="form-control" id="date_of_separation" name="date_of_separation" type="date" />
           </div>
-
           <label>At the end of the separation, did you regard the marriage as over?</label>
           <div class="form-group">
             <div class="radio-inline">
@@ -346,7 +374,7 @@
               <input class="form-control" id="self_date_regarded_marriage_over" name="self_date_regarded_marriage_over" type="date" />
             </div>
           </div>
-          
+        
           <div class=" conditional" data-cond-option="joint_application" data-cond-value="yes">
             <label>At the end of the separation, did your spouse regard the marriage as over?</label>
             <div class="form-group">
@@ -369,8 +397,11 @@
           </div>
         </div>
       
-        <div class="col-sm-6 col-sm-offset-1">
-          <label>Since the date of separation, have you and your spouse lived together in the same home but not as husband and wife?</label>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+          <label>
+            Since the date of separation, have you and your spouse lived together in the same home but not as husband and wife?&nbsp;
+            <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Separation under the one roof is where you and your spouse have lived in the same house but not as husband and wife after the date of separation.<br><br>If you and your spouse have lived separately under the one roof during the 12 month period prior to applying for a divorce then the Court will require you to provide additional evidence about your separation. We will contact you further in relation to this, if&nbsp;applicable."></i>
+          </label>
           <div class="form-group">
             <div class="radio-inline">
               <input type="radio" name="post_separation_lived_in_same_house" id="post_separation_lived_in_same_house_yes" value="yes">
@@ -522,6 +553,18 @@
               </div>          
             </div>
           </div>
+
+          <label for="future-resume-marriage">Do you think there is any reasonable likelihood that you and your spouse will resume your married life in the future?</label>
+          <div class="form-group">
+            <div class="radio-inline">
+              <input type="radio" name="future-resume-marriage" id="future-resume-marriage_yes" value="yes">
+              <label for="future-resume-marriage_yes"> Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="future-resume-marriage" id="future-resume-marriage_no" value="no">
+              <label for="future-resume-marriage_no"> No</label>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -531,8 +574,8 @@
 
       <h3 class="title">Other court cases</h3>
       <div class="row">
-        <div class="col-sm-5">
-          <label>Are there any current cases in any court about family law, child support, family violence, abuse, or child welfare involving either of the parties or their children?</label>
+        <div class="col-xs-12 col-sm-5">
+          <label>Are there any current cases in any court about family law, child support, family violence, abuse, or child welfare involving you, your spouse or your children?</label>
           <div class="form-group">
             <div class="radio-inline">
               <input type="radio" name="pending_cases" id="pending_cases_yes" value="yes">
@@ -567,8 +610,8 @@
           </div>
         </div>
 
-        <div class="col-sm-5 col-sm-offset-1">
-          <label for="existing_orders">Are there any existing orders, binding agreements, parenting plans or undertakings to a court about family law, child support, family violence, abuse or child welfare involving either of the parties or their children?</label>
+        <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+          <label for="existing_orders">Are there any existing orders, binding agreements, parenting plans or undertakings to a court about family law, child support, family violence, abuse or child welfare involving you, your spouse or your children?</label>
           <div class="form-group">
             <div class="radio-inline">
               <input type="radio" name="existing_orders" id="existing_orders_yes" value="yes">
@@ -603,9 +646,10 @@
 
 
       
-      <h3 class="title">Children</h3>
+      <h3 class="title no-margin-bottom">Children</h3>
+      <p class="lead">Please complete for each child of you and your spouse.</p>
       <div class="row">
-        <div class="col-sm-8 col-md-5">
+        <div class="col-xs-12 col-sm-8 col-md-5">
           <label for="child_members_of_family">Are there any children currently under 18 who are children of you and your spouse or who were treated as members of your family when you and your spouse separated?</label>
           <div class="form-group">
             <div class="radio-inline">
@@ -627,7 +671,7 @@
           <h4 class="title">Child 1</h4>
           
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="form-group">
                 <label for="child_1_family_name">Family Name</label>
                 <input class="form-control" id="child_1_family_name" name="child_1_family_name" type="text" />
@@ -659,7 +703,7 @@
               </div>
             
               <div class="form-group">
-                <label for="child_1_living_with">Who does the child live with?</label>
+                <label for="child_1_living_with">Who does the child live with for the majority of the&nbsp;time?</label>
                 <p><em>Husband, Wife, other (specify name and address)</em></p>
                 <div class="radio-inline">
                   <input type="radio" name="child_1_living_with" id="child_1_living_with_husband" value="husband">
@@ -702,7 +746,7 @@
             </div>
 
 
-            <div class="col-sm-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="form-group">
                 <label for="child_1_supported_by">Who financially supports the child? </label>
                 <input class="form-control" id="child_1_supported_by" name="child_1_supported_by" type="text" /> 
@@ -784,7 +828,7 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="form-group">
                 <label for="child_2_family_name">Family Name</label>
                 <input class="form-control" id="child_2_family_name" name="child_2_family_name" type="text" />
@@ -815,7 +859,7 @@
                 <input class="form-control" id="child_2_mother" name="child_2_mother" type="text" />
               </div>
 
-              <label for="child_2_living_with">Who does the child live with?</label>
+              <label for="child_2_living_with">Who does the child live with for the majority of the&nbsp;time?</label>
               <p><em>Husband, Wife, other (specify name and address)</em></p>
               <div class="form-group">
                 <div class="radio-inline">
@@ -832,7 +876,7 @@
                 </div>
               </div>
               <div class="conditional row" data-cond-option="child_2_living_with" data-cond-value="other">
-                <div class="col-sm-6 form-group">
+                <div class="col-xs-12 col-sm-6 form-group">
                   <label for="child_2_living_with_other_name">Please Specify</label>
                   <input class="form-control" id="child_2_living_with_other_name" name="child_2_living_with_other_name" type="text"/>
                 </div>
@@ -858,7 +902,7 @@
               </div>
             </div>
           
-            <div class="col-sm-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="form-group">
                 <label for="child_2_supported_by">Who financially supports the child? </label>
                 <input class="form-control" id="child_2_supported_by" name="child_2_supported_by" type="text" /> 
@@ -938,7 +982,7 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="form-group">
                 <label for="child_3_family_name">Family Name</label>
                 <input class="form-control" id="child_3_family_name" name="child_3_family_name" type="text" />
@@ -969,7 +1013,7 @@
                 <input class="form-control" id="child_3_mother" name="child_3_mother" type="text" />
               </div>
 
-              <label for="child_3_living_with">Who does the child live with?</label>
+              <label for="child_3_living_with">Who does the child live with for the majority of the&nbsp;time?</label>
               <p><em>Husband, Wife, other (specify name and address)</em></p>
               <div class="form-group">
                 <div class="radio-inline">
@@ -986,7 +1030,7 @@
                 </div>
               </div>
               <div class="conditional row" data-cond-option="child_3_living_with" data-cond-value="other">
-                <div class="col-sm-6 form-group">
+                <div class="col-xs-12 col-sm-6 form-group">
                   <label for="child_3_living_with_other_name">Please Specify</label>
                   <input class="form-control" id="child_3_living_with_other_name" name="child_3_living_with_other_name" type="text"/>
                 </div>
@@ -1012,7 +1056,7 @@
               </div>
             </div>
           
-            <div class="col-sm-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="form-group">
                 <label for="child_3_supported_by">Who financially supports the child? </label>
                 <input class="form-control" id="child_3_supported_by" name="child_3_supported_by" type="text" /> 
@@ -1091,6 +1135,7 @@
             Email <a href="mailto:info@divorceservicesonline.com.au">info@divorceservicesonline.com.au</a>
           </p>
         </div>
+
         <div class="col-xs-12 col-sm-4">
           <img src="img/nsw-law-society-member.svg" alt="" class="img-responsive footer-law-society-logo">
         </div>

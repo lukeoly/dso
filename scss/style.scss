@@ -25,7 +25,6 @@
 @import '../bower_components/font-awesome/scss/font-awesome';
 
 // Base
-@import 'base/utilities';
 @import 'base/fonts';
 
 // Components
@@ -35,6 +34,7 @@
 @import 'components/jumbotron';
 @import 'components/panels';
 @import 'components/buttons';
+@import 'components/tooltips';
 
 
 // Sections
@@ -45,3 +45,6 @@
 @import 'partials/home';
 @import 'partials/contact';
 @import 'partials/application-form';
+
+// Utility overrides
+@import 'base/utilities';

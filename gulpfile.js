@@ -72,7 +72,7 @@ gulp.task('fonts', function() {
 
 // Default task to be run with `gulp`
 gulp.task('default', ['serve', 'js', 'fonts'], function() {
-  gulp.watch(sass_path, ['sass', 'fonts']);
+  gulp.watch(sass_path, ['sass', 'js', 'fonts']);
 });
 
 

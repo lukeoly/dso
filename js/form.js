@@ -7,6 +7,17 @@ $(document).ready(function(){
     $(this).remove();
   });
 
+  // Initialise Bootstrap tooltips
+  $('[data-toggle="tooltip"]').tooltip({
+    html: true,
+    placement: 'auto',
+    trigger: 'hover focus'
+  });
+
+  // Show tooltip on input focus
+  $('#date_of_separation').on('focus', function() {
+    $('#date_of_separation_tooltip').tooltip('show');
+  });
 
   // Auto populate additional children.
  $("#child_2_family_details").on('change', function() {
